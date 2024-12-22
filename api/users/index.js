@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
           console.log('Request missing required fields, hanging the response...');
           return; // 不返回响应
         }
-        
+    }    
     if (req.query.action === 'register') {  //if action is 'register' then save to DB
         await User(req.body).save();
         res.status(201).json({
